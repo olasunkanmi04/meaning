@@ -1,0 +1,16 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 64px;
+    align-items: center;
+    border: 1px solid $border-color;
+
+    &__logo {
+        font-family: $logo-font;
+        color: $blue;
+        font-size: 2em;
+        font-weight: bold;
+    }
+}

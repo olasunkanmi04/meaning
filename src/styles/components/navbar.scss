@@ -1,16 +1,105 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 100px;
-    padding-right: 100px;
-    height: 64px;
-    align-items: center;
-    border: 1px solid $border-color;
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    &__wrap {
+        width: 100%;
+        max-width: 1366px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 100px;
+        padding-right: 100px;
+        height: 64px;
+        align-items: center;
+
+        @media screen and (max-width: 991px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
 
     &__logo {
         font-family: $logo-font;
         color: $blue;
         font-size: 2em;
         font-weight: bold;
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        transition: margin-right 0.3s;
+        transition-timing-function: ease-in-out;
+
+        @media screen and (max-width: 615px) {
+            display: block;
+            padding: 20px;
+            background: white;
+            margin-right: -9000px;
+            position: absolute;
+            right: 0;
+            top: 65px;
+            box-shadow: -9px 4px 6px -1px rgba(5, 74, 145, 0.05);
+        }
+
+        &.show {
+            margin-right: 0px;
+            height: calc(100vh - 65px);
+        }
+    }
+
+    &__item {
+        margin-left: 40px;
+
+        @media screen and (max-width: 615px) {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+
+    &__link {
+        color: $primary-text-color;
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: normal;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            // color: $alt-text-color;
+        }
+    }
+
+    &__btn {
+        color: #fff;
+        font-size: 14px;
+        font-weight: normal;
+        transition: all 0.3s ease-in-out;
+        background-color: $blue;
+        border-radius: $button-default-radius;
+        height: $button-height;
+        border: none;
+        width: 142px;
+
+        &:hover {
+            // color: $alt-text-color;
+        }
+    }
+
+    &__menu {
+        display: none;
+        line-height: 0;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+
+        @media screen and (max-width: 615px) {
+            display: block;
+        }
     }
 }

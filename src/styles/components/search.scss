@@ -1,0 +1,34 @@
+.search {
+    width: 100%;
+    max-width: 768px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 60px;
+
+
+    &__input {
+        // height: 40px;
+        border: 1px solid $border-color;
+        width: 80%;
+        border-radius: $button-default-radius;
+        padding: 12px;
+        font-size: $medium-text;
+        color: $primary-text-color;
+        line-height: normal;
+        margin-right: 16px;
+
+        &:focus {
+            outline: none;
+            border-color: #a0c2e9;
+        }
+
+        @media screen and (max-width: 520px) {
+            width: 70%;
+        }
+    }
+
+    &__btn {
+        flex: 1;
+        max-width: 100px;
+    }
+}

@@ -1,0 +1,21 @@
+.cta_btn {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: $blue;
+    border-radius: $button-default-radius;
+    height: $button-height;
+    border: none;
+    cursor: pointer;
+
+    &:disabled {
+        background-color: rgba($blue, 0.5);
+        cursor: not-allowed;
+    }
+
+    &-loader {
+        display: inline;
+        vertical-align: bottom;
+        margin-right: 5px;
+    }
+}

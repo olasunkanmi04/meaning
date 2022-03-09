@@ -24,8 +24,7 @@ export const Home = () => {
         method: "GET",
         headers: {
           "x-rapidapi-host": "dictionary-by-api-ninjas.p.rapidapi.com",
-          "x-rapidapi-key":
-            "f6a72b977bmshafc3dc66d44772ep15d948jsn80ee9bb60488",
+          "x-rapidapi-key": process.env.REACT_APP_RAPIDAPI_KY_KEY || "",
         },
       }
     )
